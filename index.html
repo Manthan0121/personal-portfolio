@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manthan Mistry | Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #f4f4f4;
+            color: #222;
+        }
+
+        header {
+            background: #222;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 24px;
+            color: #00aaff;
+        }
+
+        nav a {
+            color: #fff;
+            margin-left: 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #00aaff;
+        }
+
+        .hero {
+            background: #111;
+            color: #fff;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #ccc;
+        }
+
+        section {
+            padding: 60px 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        h2.section-title {
+            font-size: 32px;
+            text-align: center;
+            color: #00aaff;
+            margin-bottom: 30px;
+        }
+
+        .about p {
+            text-align: center;
+            max-width: 800px;
+            margin: auto;
+            font-size: 18px;
+        }
+
+        .skills ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            padding: 0;
+        }
+
+        .skills li {
+            background: #00aaff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .projects .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card h3 {
+            color: #00aaff;
+        }
+
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            max-width: 500px;
+            margin: auto;
+            gap: 15px;
+        }
+
+        .contact input,
+        .contact textarea {
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact button {
+            background: #00aaff;
+            color: white;
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .contact button:hover {
+            background: #0077cc;
+        }
+
+        footer {
+            background: #222;
+            color: #aaa;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Manthan Mistry</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Hi, I'm Manthan</h2>
+        <p>Web Developer | UI Designer | Freelancer</p>
+    </section>
+
+    <section id="about" class="about">
+        <h2 class="section-title">About Me</h2>
+        <p>
+            I'm a passionate web developer with experience in building dynamic and responsive websites using HTML, CSS,
+            JavaScript, and PHP. I love creating clean and user-friendly designs that make an impact.
+        </p>
+    </section>
+
+    <section id="skills" class="skills">
+        <h2 class="section-title">Skills</h2>
+        <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>Bootstrap</li>
+            <li>PHP</li>
+            <li>MySQL</li>
+            <li>jQuery</li>
+            <li>AJAX</li>
+            <li>WordPress</li>
+        </ul>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="grid">
+            <div class="project-card">
+                <h3>Gym Website</h3>
+                <p>Responsive one-page gym website with modern layout and services section.</p>
+            </div>
+            <div class="project-card">
+                <h3>Portfolio Site</h3>
+                <p>A personal portfolio site to showcase work, skills, and contact form integration.</p>
+            </div>
+            <div class="project-card">
+                <h3>Blog Template</h3>
+                <p>Custom blog template designed for educational content with category filters.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2 class="section-title">Contact Me</h2>
+        <form onsubmit="submitForm(event)">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        &copy; 2025 Manthan Mistry | All rights reserved.
+    </footer>
+
+    <script>
+        function submitForm(e) {
+            e.preventDefault();
+            alert('Thanks for your message! I will contact you soon.');
+            e.target.reset();
+        }
+    </script>
+</body>
+
+</html>
